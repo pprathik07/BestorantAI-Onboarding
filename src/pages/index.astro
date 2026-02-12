@@ -1,0 +1,46 @@
+---
+import DemoLayout from '../layouts/DemoLayout.astro';
+---
+
+<DemoLayout
+  title="BestorantAI — AI-Powered Restaurant Marketing"
+  description="AI-powered ad automation for restaurants. Run Meta ads, generate creatives, and grow your business on autopilot."
+>
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="text-center max-w-2xl mx-auto px-4">
+      <!-- Logo -->
+      <div class="flex items-center justify-center gap-3 mb-8">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+          <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="text-3xl font-bold font-heading">
+          <span class="text-white">Bestorant</span><span class="text-primary-light">AI</span>
+        </span>
+      </div>
+
+      <h1 class="text-4xl font-extrabold font-heading mb-4 gradient-text">
+        Demo Pages
+      </h1>
+      <p class="text-text-secondary text-lg mb-10">
+        Choose a demo page variation to preview
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/demo-start-1"
+          class="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-light text-white font-bold text-base hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 transition-all"
+        >
+          Variation 1: Pain Point →
+        </a>
+        <a
+          href="/demo-start-2"
+          class="px-8 py-4 rounded-xl bg-gradient-to-r from-secondary to-secondary-light text-white font-bold text-base hover:shadow-lg hover:shadow-secondary/30 hover:-translate-y-1 transition-all"
+        >
+          Variation 2: Dashboard →
+        </a>
+      </div>
+    </div>
+  </div>
+</DemoLayout>
