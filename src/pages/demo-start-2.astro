@@ -5,109 +5,87 @@ import Footer from '../components/Footer.astro';
 import TrustBadges from '../components/TrustBadges.astro';
 import Testimonial from '../components/Testimonial.astro';
 import DemoForm from '../components/DemoForm';
-import DashboardPreview from '../components/DashboardPreview';
-import FeaturePills from '../components/FeaturePills';
-import LiveActivityFeed from '../components/LiveActivityFeed';
 ---
 
 <DemoLayout
-  title="Your Restaurant's Marketing, Completely Automated | BestorantAI"
-  description="AI-generated ads, automated posting, and real-time insights — all in one dashboard. See why 500+ restaurants trust BestorantAI for their marketing."
+  title="See the #1 Rated Restaurant Marketing Platform | BestorantAI"
+  description="No contracts. No long-term commitment. See how BestorantAI helps restaurants grow their direct sales and give customers the best online experience."
   variant="2"
 >
   <Navbar />
 
-  <!-- Hero Section — Dashboard Preview Style -->
-  <section class="pt-24 pb-12 lg:pt-28 lg:pb-16 themed-section relative overflow-hidden transition-colors duration-300">
+  <!-- Hero: Bullet Points + Sticky Form -->
+  <section class="pt-24 pb-12 lg:pt-28 lg:pb-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <!-- Left content -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+        <!-- Left Column -->
         <div class="pt-4 lg:pt-8">
-          <h1 class="text-4xl sm:text-5xl font-extrabold font-heading leading-tight tracking-tight mb-5 themed-h1 transition-colors duration-300">
+          <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-gray-900 leading-tight tracking-tight mb-4 text-balance">
             See the #1 rated restaurant marketing platform in action
           </h1>
 
-          <p class="themed-text text-base leading-relaxed mb-6 transition-colors duration-300">
-            No contracts. No long-term commitment. Nothing to lose.<br/>
-            There's a reason why thousands of restaurants trust BestorantAI.
+          <p class="text-base text-gray-500 mb-4 max-w-lg leading-relaxed">
+            Get more customers, cut costs, and increase your profits with AI tools built to help restaurants grow.
           </p>
 
-          <!-- Rating -->
-          <div class="flex items-center gap-2 mb-10">
-            <div class="flex gap-0.5">
-              {[1,2,3,4,5].map(i => (
-                <svg class={`w-4 h-4 ${i <= 4 ? 'text-yellow-400' : 'text-yellow-300'}`} fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <!-- Star Rating -->
+          <div class="flex items-center gap-2 mb-8">
+            <div class="flex">
+              {[1,2,3,4,5].map(() => (
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               ))}
             </div>
-            <span class="themed-text-muted text-sm transition-colors">Rated 4.8 stars across 560+ reviews</span>
+            <span class="text-sm text-gray-500">Rated 4.8 stars across 200+ reviews</span>
           </div>
 
-          <!-- What we cover -->
-          <div class="mb-10">
-            <h3 class="themed-h3 font-semibold text-base mb-5 transition-colors">On your 20 minute demo, we'll cover</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex items-start gap-3 p-4 rounded-xl themed-card transition-colors duration-300">
-                <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div>
-                  <p class="themed-h3 font-semibold text-sm transition-colors">AI Creatives + Ad Copy</p>
-                  <p class="themed-text-muted text-xs mt-0.5 transition-colors">Auto-generated branded posters and captions.</p>
-                </div>
-              </div>
+          <p class="text-sm font-semibold text-gray-800 mb-5">On your 20 minute demo, we'll cover how BestorantAI can help you:</p>
 
-              <div class="flex items-start gap-3 p-4 rounded-xl themed-card transition-colors duration-300">
-                <div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div>
-                  <p class="themed-h3 font-semibold text-sm transition-colors">Marketing Automations</p>
-                  <p class="themed-text-muted text-xs mt-0.5 transition-colors">To maximize sales from existing customers.</p>
-                </div>
+          <!-- Bullet Points -->
+          <div class="space-y-5 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-
-              <div class="flex items-start gap-3 p-4 rounded-xl themed-card transition-colors duration-300">
-                <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div>
-                  <p class="themed-h3 font-semibold text-sm transition-colors">Insights Dashboard</p>
-                  <p class="themed-text-muted text-xs mt-0.5 transition-colors">Real-time performance and ROI tracking.</p>
-                </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Get more customers from Google</p>
+                <p class="text-sm text-gray-500 mt-0.5">With a high-performing website and AI-powered SEO.</p>
               </div>
+            </div>
 
-              <div class="flex items-start gap-3 p-4 rounded-xl themed-card transition-colors duration-300">
-                <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div>
-                  <p class="themed-h3 font-semibold text-sm transition-colors">And more...</p>
-                  <p class="themed-text-muted text-xs mt-0.5 transition-colors">Meta integration, scheduling, and real results.</p>
-                </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Maximize sales from existing customers</p>
+                <p class="text-sm text-gray-500 mt-0.5">With cutting-edge marketing automation, upsells, texts, and push notifications.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Build customer loyalty</p>
+                <p class="text-sm text-gray-500 mt-0.5">With your own mobile app and customized rewards programs.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Cut costs and improve efficiency</p>
+                <p class="text-sm text-gray-500 mt-0.5">With commission-free delivery, simple integrations, and more.</p>
               </div>
             </div>
           </div>
-
-          <!-- Badges -->
-          <div class="flex flex-wrap items-center gap-4 mb-8">
-            <div class="themed-badge px-4 py-2.5 rounded-xl transition-colors duration-300">
-              <p class="themed-badge-text text-xs font-bold transition-colors">🏆 Leader Position Spring 2026</p>
-            </div>
-            <div class="themed-badge px-4 py-2.5 rounded-xl transition-colors duration-300">
-              <p class="themed-badge-text text-xs font-bold transition-colors">⭐ Rated #1 Restaurant Marketing Software</p>
-            </div>
-          </div>
-
-          <!-- Inline testimonial -->
-          <Testimonial
-            quote="BestorantAI makes online marketing so easy. They're the secret to our online success."
-            name="Priya Patel"
-            role="Owner"
-            restaurant="Tandoori Nights"
-          />
         </div>
 
-        <!-- Right sidebar form -->
+        <!-- Right Column: Sticky Form -->
         <div class="lg:sticky lg:top-24">
           <DemoForm client:load />
         </div>
@@ -115,114 +93,87 @@ import LiveActivityFeed from '../components/LiveActivityFeed';
     </div>
   </section>
 
-  <!-- Dashboard Preview (always dark for contrast) -->
-  <section class="py-16 bg-dark">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mb-4">
-          See Your <span class="gradient-text">AI Dashboard</span> in Action
-        </h2>
-        <p class="text-text-secondary text-lg max-w-2xl mx-auto">
-          Watch campaigns auto-create, budgets optimize, and insights update — all in real time
-        </p>
+  <!-- Dark Section: No Contract / Commitment -->
+  <section class="py-20 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white leading-tight mb-4">
+            No contract. No long-term commitment. Nothing to lose.
+          </h2>
+          <p class="text-gray-400 text-base leading-relaxed">
+            There's a reason why hundreds of restaurants trust BestorantAI. Our platform is designed to deliver results from day one — with zero risk.
+          </p>
+        </div>
+        <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <p class="text-3xl font-bold text-white mb-1">500+</p>
+              <p class="text-sm text-gray-400">Restaurants served</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-white mb-1">40%</p>
+              <p class="text-sm text-gray-400">Avg. increase in walk-ins</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-white mb-1">3x</p>
+              <p class="text-sm text-gray-400">Return on ad spend</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-white mb-1">24hrs</p>
+              <p class="text-sm text-gray-400">To go live</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <DashboardPreview client:visible />
-    </div>
-  </section>
-
-  <!-- Feature pills -->
-  <section class="py-8 themed-border-section border-y overflow-hidden transition-colors duration-300">
-    <div class="max-w-7xl mx-auto">
-      <FeaturePills client:visible />
     </div>
   </section>
 
   <!-- Success Stories -->
-  <section class="py-16 themed-section transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold font-heading themed-h2 text-center mb-10 transition-colors">
-        Local Owners Share Their Success Stories
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading text-gray-900 mb-3">
+        Local Owners Share Their <span class="text-green-600">Success Stories</span>
       </h2>
+      <p class="text-gray-500 text-sm mb-10 max-w-lg mx-auto">
+        Discover how local restaurants increased sales and saved on fees with BestorantAI's tailored solutions.
+      </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="themed-card-solid rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+      <div class="flex justify-center gap-3 mb-10">
+        <TrustBadges />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+        <div class="rounded-2xl border border-gray-100 p-6">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white font-bold text-lg">R</div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+              <span class="text-white font-bold text-sm">RS</span>
+            </div>
             <div>
-              <p class="themed-h3 font-semibold text-sm transition-colors">Rajesh Sharma</p>
-              <p class="themed-text-muted text-xs transition-colors">Owner at Spice Garden</p>
+              <p class="font-semibold text-gray-900 text-sm">Rajesh Sharma</p>
+              <p class="text-xs text-gray-500">Owner at Spice Garden</p>
             </div>
           </div>
-          <p class="themed-text text-sm italic mb-4 transition-colors">"Our walk-ins increased 40% in just the first month of using BestorantAI."</p>
-          <div class="flex gap-4">
-            <div>
-              <p class="text-primary font-bold text-lg">+40%</p>
-              <p class="themed-text-muted text-xs transition-colors">Walk-in growth</p>
-            </div>
-            <div>
-              <p class="text-primary font-bold text-lg">₹45K</p>
-              <p class="themed-text-muted text-xs transition-colors">Monthly savings</p>
-            </div>
-          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            "BestorantAI completely changed how we run our marketing. We used to spend hours on Facebook ads with no idea if they worked. Now our AI creates everything automatically — and our walk-ins increased 40% in the first month."
+          </p>
         </div>
 
-        <div class="themed-card-solid rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+        <div class="rounded-2xl border border-gray-100 p-6">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white font-bold text-lg">P</div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
+              <span class="text-white font-bold text-sm">YV</span>
+            </div>
             <div>
-              <p class="themed-h3 font-semibold text-sm transition-colors">Priya Patel</p>
-              <p class="themed-text-muted text-xs transition-colors">Founder at Tandoori Nights</p>
+              <p class="font-semibold text-gray-900 text-sm">Yuliana Vasquez</p>
+              <p class="text-xs text-gray-500">Owner at Samos Oaxaca</p>
             </div>
           </div>
-          <p class="themed-text text-sm italic mb-4 transition-colors">"ROI went from 0.5x to 3.4x. I didn't think AI marketing could work this well."</p>
-          <div class="flex gap-4">
-            <div>
-              <p class="text-primary font-bold text-lg">3.4x</p>
-              <p class="themed-text-muted text-xs transition-colors">ROI increase</p>
-            </div>
-            <div>
-              <p class="text-primary font-bold text-lg">$2K</p>
-              <p class="themed-text-muted text-xs transition-colors">Agency fees saved</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="themed-card-solid rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white font-bold text-lg">A</div>
-            <div>
-              <p class="themed-h3 font-semibold text-sm transition-colors">Arun Kumar</p>
-              <p class="themed-text-muted text-xs transition-colors">Owner at Biryani House</p>
-            </div>
-          </div>
-          <p class="themed-text text-sm italic mb-4 transition-colors">"Everything runs on autopilot. AI creates the ads, posts them, and I see real customers come in."</p>
-          <div class="flex gap-4">
-            <div>
-              <p class="text-primary font-bold text-lg">+300%</p>
-              <p class="themed-text-muted text-xs transition-colors">Online orders</p>
-            </div>
-            <div>
-              <p class="text-primary font-bold text-lg">2 min</p>
-              <p class="themed-text-muted text-xs transition-colors">Campaign setup</p>
-            </div>
-          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            "BestorantAI makes online marketing so easy. They're the secret to our online success. I couldn't imagine running our restaurant without it."
+          </p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Bottom CTA -->
-  <section class="py-16 themed-cta-section border-t transition-colors duration-300" style="border-color: inherit;">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold font-heading themed-h2 mb-4 transition-colors">
-        Drive more customers to your restaurant
-      </h2>
-      <p class="themed-text text-lg mb-8 transition-colors">
-        No contracts. No long-term commitment. Nothing to lose.
-      </p>
-      <a href="#demo-form" class="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-dark text-white font-bold text-base shadow-xl shadow-primary/20 hover:-translate-y-1 transition-transform">
-        Book Your Demo →
-      </a>
     </div>
   </section>
 

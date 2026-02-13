@@ -10,14 +10,14 @@ const { quote, name, role, restaurant } = Astro.props;
 const initials = name.split(' ').map(n => n[0]).join('');
 ---
 
-<div class="themed-testimonial-card rounded-2xl p-6 lg:p-8 transition-colors duration-300">
-  <div class="flex items-start gap-4">
-    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
-      <span class="text-white font-bold text-sm">{initials}</span>
-    </div>
-    <div>
-      <p class="themed-testimonial-name font-semibold text-sm transition-colors">{name}, <span class="themed-testimonial-role font-normal transition-colors">{role} at {restaurant}</span></p>
-      <p class="themed-testimonial-quote text-sm italic leading-relaxed mt-2 transition-colors">"{quote}"</p>
-    </div>
+<div class="testimonial-inline">
+  <div class="w-11 h-11 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center flex-shrink-0">
+    <span class="text-white font-bold text-sm">{initials}</span>
+  </div>
+  <div>
+    <p class="text-sm mb-1.5">
+      <a href="#" class="text-green-600 font-semibold hover:underline">{name}</a><span class="text-gray-500">, {role} at {restaurant}</span>
+    </p>
+    <p class="text-sm text-gray-600 leading-relaxed">"{quote}"</p>
   </div>
 </div>

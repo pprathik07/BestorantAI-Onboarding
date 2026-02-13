@@ -1,46 +1,43 @@
 ---
-import DemoLayout from '../layouts/DemoLayout.astro';
+import '../styles/global.css';
 ---
 
-<DemoLayout
-  title="BestorantAI — AI-Powered Restaurant Marketing"
-  description="AI-powered ad automation for restaurants. Run Meta ads, generate creatives, and grow your business on autopilot."
->
-  <div class="min-h-screen flex items-center justify-center">
-    <div class="text-center max-w-2xl mx-auto px-4">
-      <!-- Logo -->
-      <div class="flex items-center justify-center gap-3 mb-8">
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-          <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BestorantAI — The #1 rated restaurant marketing platform. Schedule a free demo to see how AI can grow your restaurant." />
+    <title>BestorantAI — Restaurant Marketing Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="min-h-screen bg-white flex items-center justify-center">
+    <div class="max-w-md mx-auto px-6 py-16 text-center">
+      <div class="flex items-center justify-center gap-2 mb-8">
+        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <span class="text-3xl font-bold font-heading">
-          <span class="text-white">Bestorant</span><span class="text-primary-light">AI</span>
-        </span>
+        <span class="text-2xl font-bold font-heading text-gray-900">BestorantAI</span>
       </div>
 
-      <h1 class="text-4xl font-extrabold font-heading mb-4 gradient-text">
-        Demo Pages
-      </h1>
-      <p class="text-text-secondary text-lg mb-10">
-        Choose a demo page variation to preview
-      </p>
+      <h1 class="text-2xl font-bold font-heading text-gray-900 mb-3">Demo Page Variations</h1>
+      <p class="text-gray-500 text-sm mb-8">Choose a demo page to preview. These are A/B test variations for the BestorantAI onboarding funnel.</p>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="/demo-start-1"
-          class="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-light text-white font-bold text-base hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 transition-all"
-        >
-          Variation 1: Pain Point →
+      <div class="space-y-3">
+        <a href="/demo-start-1" class="block w-full py-3.5 px-6 text-sm font-semibold text-white bg-gray-900 rounded-xl hover:bg-black transition-colors">
+          Variation 1 — Feature Cards
         </a>
-        <a
-          href="/demo-start-2"
-          class="px-8 py-4 rounded-xl bg-gradient-to-r from-secondary to-secondary-light text-white font-bold text-base hover:shadow-lg hover:shadow-secondary/30 hover:-translate-y-1 transition-all"
-        >
-          Variation 2: Dashboard →
+        <a href="/demo-start-2" class="block w-full py-3.5 px-6 text-sm font-semibold text-gray-700 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors">
+          Variation 2 — Bullet Points + Stats
         </a>
       </div>
+
+      <p class="text-xs text-gray-400 mt-8">&copy; 2026 BestorantAI</p>
     </div>
-  </div>
-</DemoLayout>
+  </body>
+</html>

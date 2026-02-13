@@ -1,27 +1,19 @@
 ---
-import ThemeToggle from './ThemeToggle';
 ---
 
-<nav class="themed-nav fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group">
-        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-          <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <a href="/" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <span class="text-xl font-bold font-heading tracking-tight">
-          <span class="nav-logo-text transition-colors duration-300">Bestorant</span><span class="nav-logo-accent transition-colors duration-300">AI</span>
-        </span>
+        <span class="text-lg font-bold font-heading text-gray-900">BestorantAI</span>
       </a>
 
-      <div class="flex items-center gap-4">
-        <ThemeToggle client:load />
-        <a href="#demo-form" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-primary to-primary-dark text-white font-semibold text-sm hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5">
-          Get Free Demo
-        </a>
-      </div>
+      <a href="#demo-form" class="btn-nav">Get a free demo</a>
     </div>
   </div>
 </nav>
